@@ -1,0 +1,1 @@
+var res_prop = {"FOOD":1,"DINING ROOM":1,"WATER GLASS":1,"JUICE":1,"PLATE":1,"CUP":1, "FRIDGE":1, "CHAIR":1};

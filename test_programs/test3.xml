@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <actionname>Make coffe</actionname>
+  <description>Open coffee maker. Put filter in main basket, put ground coffee in filter, fill reservoir with water, turn on coffee maker.</description>
+  <program>
+    <block type="start_block2" id="4^8~j7y?cz/yHDQA+@r[" movable="false" x="70" y="70">
+      <next>
+        <block type="action_Walk" id="_(I,r6an0XG{x@T1.Q}i">
+          <value name="VALUE0">
+            <block type="type_object" id="5i2.vMhMe2f7-nTb56MS">
+              <field name="TYPE">KITCHEN</field>
+              <field name="VAR">1</field>
+            </block>
+          </value>
+          <next>
+            <block type="action_Open" id="S+fAadUO{pw.O;LS=iIU">
+              <value name="VALUE0">
+                <block type="type_object" id=".S;}|DpercSL6Gt6J;(b@C6">
+                  <field name="TYPE">COFFE MAKER</field>
+                  <field name="VAR">1</field>
+                </block>
+              </value>
+              <next>
+                <block type="action_Find" id="g!gJCV^X#a}LlQPikz^_">
+                  <value name="VALUE0">
+                    <block type="type_object" id=";KDXS,L_/_{T]1uZG:2j">
+                      <field name="TYPE">COFFEE FILTER</field>
+                      <field name="VAR">1</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="action_Grab" id="v77percGperc2R|ba@qyHV0/k)">
+                      <value name="VALUE0">
+                        <block type="type_object" id="F@4BMrs3[Nn0R,F[|Y6(">
+                          <field name="TYPE">COFFEE FILTER</field>
+                          <field name="VAR">1</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="action_PutBack" id="641+KetOxzy[`dHj0OeI">
+                          <value name="VALUE0">
+                            <block type="type_object" id="kAMwb]aA`A:;hZ1`4FL,">
+                              <field name="TYPE">COFFEE FILTER</field>
+                              <field name="VAR">1</field>
+                            </block>
+                          </value>
+                          <value name="VALUE1">
+                            <block type="type_object" id="9`Z-VZU,Bv)Co|KKqzQ8">
+                              <field name="TYPE">COFFE MAKER</field>
+                              <field name="VAR">1</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="action_Grab" id="BkL.U@!+{)F[qbrod:2M">
+                              <value name="VALUE0">
+                                <block type="type_object" id="mo*2.q0+x}~36TwiqF3@">
+                                  <field name="TYPE">GROUND COFFEE</field>
+                                  <field name="VAR">1</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="action_Find" id="VBoPkj5ZEe8;u6}74wbA">
+                                  <value name="VALUE0">
+                                    <block type="type_object" id="JQ#jUVb.4#S~x3WbyWjB">
+                                      <field name="TYPE">GROUND COFFEE</field>
+                                      <field name="VAR">1</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="action_PutBack" id="rs@.+K4ukwaK2g6VqE6h">
+                                      <value name="VALUE0">
+                                        <block type="type_object" id="jB^]CaU/UIXtnO+l@T-h">
+                                          <field name="TYPE">GROUND COFFEE</field>
+                                          <field name="VAR">1</field>
+                                        </block>
+                                      </value>
+                                      <value name="VALUE1">
+                                        <block type="type_object" id="_(;~#h;-F`Qs#|cd@}r8">
+                                          <field name="TYPE">COFFE MAKER</field>
+                                          <field name="VAR">1</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="action_Pour" id=")_e(2~A}SU#(em`?452r">
+                                          <value name="VALUE0">
+                                            <block type="type_object" id="#SgN0fVUvjHbj4[/Lpfw">
+                                              <field name="TYPE">WATER</field>
+                                              <field name="VAR">1</field>
+                                            </block>
+                                          </value>
+                                          <value name="VALUE1">
+                                            <block type="type_object" id="8eVFi]e]T8,{]!SqcqAg">
+                                              <field name="TYPE">COFFE MAKER</field>
+                                              <field name="VAR">1</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="action_Close" id="v3.HN!CtSH6alvCA5Zwu">
+                                              <value name="VALUE0">
+                                                <block type="type_object" id="p*zF}perc5s1perc+?aFo(q+cV">
+                                                  <field name="TYPE">COFFE MAKER</field>
+                                                  <field name="VAR">1</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="action_SwitchOn" id="y^s;nSRuLKDGPqJiq`s:">
+                                                  <value name="VALUE0">
+                                                    <block type="type_object" id="zJp.7NGMf57AB~Pq|N]{">
+                                                      <field name="TYPE">COFFE MAKER</field>
+                                                      <field name="VAR">1</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </program>
+</xml>

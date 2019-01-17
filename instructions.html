@@ -1,0 +1,43 @@
+
+<html>
+
+<h3> Instructions </h3>
+<!-- Make sure your commands are as precise as possible. For example, if you want to  "put a cup of water on the table", your code needs to make sure that the robot first <span style="font-weight: bold"> finds a cup </span>, then grabs it, then walks to a kitchen sink, switches on a faucet, places the cup under the pipe, switches off the faucet and putsthe cup on the kitchen table. <br> <span style="font-weight: bold">If any of these steps are missing, the robot will not be able to execute the task correctly. </span> -->
+
+<ol style="font-size: 14px">
+	When creating your script, make sure your commands are as <b>precise as possible</b>. For example, if you want to  "put a cup of water on the table", your code needs to make sure that the robot first <span style="font-weight: bold"> finds a cup </span>, then grabs it, then walks to a kitchen sink, switches on a faucet, places the cup in the sink, switches off the faucet grabs the cup and puts it kitchen table. <br> <span style="font-weight: bold">If any of these steps are missing, the robot will not be able to execute the task correctly. </span>
+
+<li style="padding-top:1%; font-size: medium"> Read the name of the task. </li> <br>
+Read the name of the <span style="color:#08c"; font-weight="bold"> task </span> to execute. The name will be general, but you need to implement it in your script with as <span style="font-weight: bold"> much detail as possible </span>. Click on the task name to open the editor for your script.
+<br><br>
+<div id="descriptioninstruction">
+<li style="padding-top:1%; font-size: medium"> Write a description of the task. </li> <br>
+Write a description of how to perform the given task. Write the description with as much detail as possible but make it sound <span style="font-weight: bold"> natural</span>, as if you were telling a friend how to do it. For example if the task is <span style="font-weight: bold"> Doing homework</span>, you could write something like:
+<br><br>
+<i>
+	I walk to the kitchen and find the coffee maker. I open the coffee maker. I grab a coffee filter and put it in the coffe maker. I find ground coffee, grab it and put it into the coffee filter. I put water into the coffee maker and close it. I switch the coffee maker on and wait.</i>
+</span>
+<br><br>
+</div>
+<li style="padding-top:1%; font-size: medium"> Set the scene for the task. </li> <br>
+Add the rooms and objects that will be involved in the task you are implementing. To do so, <span style="font-weight: bold"> click on Add Room/Add Prop and select name of the object or room you need. </span> You can write the name to select faster.
+<br>
+After entering the object, select the number of objects of that type that you will need, for example 3 cups, instead of one. If you chose 3 cups, the room will contain three cups, numbered 1 to 3. When you write the code, <span style='font-weight: bold'> always tell which object the robot should be interacting with, whether the first cup (number 1), the second cup (number 2) or the third cup (number 3). </span>
+
+<br>
+
+<li style="padding-top:1%; font-size: medium"> Create the script for the action. </li><br>
+Your code will be directly translated into robot code and executed on a robotic platform. So for example, if you start the action with "grab cup", the robot will be lost. <b> You first need to make sure to bring the robot to the cup.</b> You can do this by using the command "find cup number 1". This will make the robot go around the room until it finds the first cup that you placed in the scene.
+
+<ul>
+	<li style="padding-top:1%"> Click and drag the green block in the left into the canvas. <img src='assets/select_action.png'></img> </li>
+<li style="padding-top:1%"> Click on <span style="font-weight: bold"> Select action </span> and chose one action from the list. Some actions are not shown until you enter the needed props.</li>
+<li style="padding-top:1%"> Stack your blocks of actions to generate the script. Connect the first block after <img src='assets/action_start.png'></img>, then second block to the first block and so on. If you want to delete a block, drag and drop it into the trash bin. </li>
+
+<li style="padding-top:1%"> When you are done writing your script, click submit. If you believe some actions are missing write it in the feedback field. Below is one example of how a script could look like.</li>
+<img style="height: 400px;" src='assets/script.png'></img>
+</ul>
+</li>
+</ol>
+You can click Show Examples to see some examples of how to write the scripts. In show instructions there is an examplanation of how to write the scripts.
+</html>

@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <actionname>Eat dinner</actionname>
+  <description>Put food on plate, pour water in cup, eat dinner and drink water.</description>
+  <program>
+    <block type="start_block2" id="b(#V5percL2j?Qyd5}mc]Kt" movable="false" x="70" y="70">
+      <next>
+        <block type="action_Walk" id="c)kCw4,|@]UfVVtx8eP3">
+          <value name="VALUE0">
+            <block type="type_object" id="O10;3iQqASkCz:^+HQVa">
+              <field name="TYPE">DINING ROOM</field>
+              <field name="VAR">1</field>
+            </block>
+          </value>
+          <next>
+            <block type="action_Open" id="V]DkU{n};sy2rL!*-D-_">
+              <value name="VALUE0">
+                <block type="type_object" id="btVJkskqs9PT#V~!.)(}">
+                  <field name="TYPE">FRIDGE</field>
+                  <field name="VAR">1</field>
+                </block>
+              </value>
+              <next>
+                <block type="action_Grab" id="n(FbKJIT~kY=Hi|8K`fO">
+                  <value name="VALUE0">
+                    <block type="type_object" id="B^a@x3:CFpJg{p2g7jj`">
+                      <field name="TYPE">FOOD</field>
+                      <field name="VAR">1</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="action_PutBack" id="`yf=ekzRXo=)PL~5HGm;">
+                      <value name="VALUE0">
+                        <block type="type_object" id="v::yIT+;.y9XHll0da!7">
+                          <field name="TYPE">FOOD</field>
+                          <field name="VAR">1</field>
+                        </block>
+                      </value>
+                      <value name="VALUE1">
+                        <block type="type_object" id="Lx6!3=K^6XfUBuhC#!HG">
+                          <field name="TYPE">PLATE</field>
+                          <field name="VAR">1</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="action_Find" id="l!S8ztRh)R;[Gjn]ikxs">
+                          <value name="VALUE0">
+                            <block type="type_object" id="s{EMb+^zw)@5u}=OHPXt">
+                              <field name="TYPE">CUP</field>
+                              <field name="VAR">1</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="action_Grab" id="Ex^%y]`qz)5]8`4^IS/Y">
+                              <value name="VALUE0">
+                                <block type="type_object" id="o~++w)lA,yd*.P-pWkc_">
+                                  <field name="TYPE">JUICE</field>
+                                  <field name="VAR">1</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="action_Pour" id="OZ/GB?HS~7qpercpercaEca#hw">
+                                  <value name="VALUE0">
+                                    <block type="type_object" id=",(@7`mjrD2U+(4Q3b66l">
+                                      <field name="TYPE">JUICE</field>
+                                      <field name="VAR">1</field>
+                                    </block>
+                                  </value>
+                                  <value name="VALUE1">
+                                    <block type="type_object" id="g`wjD(`fFaS+}W5gVJ/M">
+                                      <field name="TYPE">CUP</field>
+                                      <field name="VAR">1</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="action_Sit" id="X++jli`TuG52np*8w])-">
+                                      <value name="VALUE0">
+                                        <block type="type_object" id="(Y@y[U,QaX^9k5UG}xA-">
+                                          <field name="TYPE">CHAIR</field>
+                                          <field name="VAR">1</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="action_Eat" id="L9KjMdl``JS{nGRU8O_j">
+                                          <value name="VALUE0">
+                                            <block type="type_object" id="T16BOa.C4a)Hdn2Hk^P,">
+                                              <field name="TYPE">PLATE</field>
+                                              <field name="VAR">1</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="action_Drink" id="/QM)Nyt3.}3R4+_]2Gr*">
+                                              <value name="VALUE0">
+                                                <block type="type_object" id="cA=gzx5=[percOUnRDM_;dI">
+                                                  <field name="TYPE">CUP</field>
+                                                  <field name="VAR">1</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </program>
+</xml>

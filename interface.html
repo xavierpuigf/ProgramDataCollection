@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Synthetic Stories</title>
+    <!-- Bootstrap -->
+
+      <style>
+    .collapse.in {
+      height: 100%;  /* this style already exists in bootstrap.css */
+      overflow: visible;  /* this one doesn't. Add it! */
+    }
+    .collapse {
+    overflow: hidden;
+    }
+    .input-xlarge{
+    padding-bottom: 0px;
+    height: 25px ! important;
+    }
+    .input-xxlarge{
+    height: 40px ! important;
+    }
+    </style>
+    <link href="./bootstrap/img/glyphicons-halflings.png" rel="stylesheet" media="screen">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="./libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./libraries/jquery-ui.css" rel="stylesheet" media="screen">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./libraries/jquery-ui.js"></script>
+    <script src="./libraries/bootstrap/js/bootstrap.min.js"></script>
+    <script src="blockly/blockly_uncompressed.js"></script>
+    <script src="blockly/blocks_compressed.js"></script>
+    <script src="blockly/msg/js/en.js"></script>
+    <script src="./data2.js"></script>
+    <script src="./command.js"></script>
+    <script src="./log_script.js"></script>
+    <script src="./backend.js"></script>
+    <script src="./tutorial.js"></script>
+    <script src="./action.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.3/seedrandom.min.js"></script>
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+
+  </head>
+  <body onload="javascript:startup();">
+
+    <div style="width:95%; padding-top: 5%">
+      <div class="row-fluid">
+        <div id ="startHIT" class="span12" style="text-align: center">
+        </div>
+        <div class="span11 offset1">
+          <div class="span8">
+            <h2> Create scripts for the given actions </h2>
+          </div>
+         
+          <div class="span4" style="padding-top: 1%">
+          <button  id='hide_instructions' type="button" class="btn btn-default btn-lg" onClick="switchInstruction()" style="margin-left: 10%; display: inline"> Show Instructions </button>
+            <!-- <button  id='submit_but' type="button" class="btn btn-default btn-lg disabled" style="float:right"> Submit </button> -->
+            <form id='submitid' action='aux_url' method='post' style="display:inline">
+              <input type="submit" id="submitButton" value="Submit" disabled="disabled" autocomplete="off" onClick="return  confirmSubmit()" class="btn btn-default btn-lg" style="float:right"/>
+              <input type="hidden" name="answer" id="answer" value="" autocomplete="off" />
+              <input type="hidden" name="time" id="time" value="" autocomplete="off" />
+              <input type="hidden" name="assignmentId" id="assignment" value="" autocomplete="off" />
+              <input type="hidden" name="owner" id="owner" value="" autocomplete="off" />
+              <input type="hidden" name="splitname" id="splitname" value="" autocomplete="off" />
+            </form>
+      
+          </div>
+          <div id = 'goal' class="span11" style="max-width: 80%; font-size: medium; font-weight:310">
+		  <div w3-include-html="task.html"></div> 
+          </div>
+          <!-- <div class="span9"><h4> To complete the task create <span style="font-weight: bold"> 3 scripts </span> for the actions described.  </h4></div>
+           -->
+          <div id="tutorialdiv" style="display: none" class="span11">
+            <hr>
+            <h3> Tutorial </h3>
+             <p id='section_tutorial' style="display: inline; font-size: large; font-weight: bold;"> Intro </p>
+             <button  id='next_tutorial' type="button" class="btn btn-default btn-lg" onClick="nextStepTutorial()" style="display: inline"> Next </button>
+             <button  id='skip_tutorialbeg' type="button" class="btn btn-default btn-lg" onClick="checkTutorial(skip_tutorialbeg)" style="display: inline"> Skip Tutorial </button>
+            <div id="tutorialContent" style="font-size: medium">
+            </div>
+          </div>
+
+
+          <div id="instructiondiv" style="display: none" class="span11">
+          <hr>
+		  <div w3-include-html="instructions.html"></div> 
+            <!-- <p style="font-size: large"> We show an <a href="#collapse0"> example of an action </a> to see how it works. You can modify this example but to complete the task you need to create 3 more. </p> -->
+          </div>
+            
+          <div class = "span11">
+            
+            
+            <br>
+            <!-- <div style="display: inline"> -->
+            <h3 style="display:inline"> Task List </h3>
+            <button  id='hide_examples' type="button" class="btn btn-default btn-lg" onClick="switchExample()" style="margin-left: 10%; display: inline; float: right"> Show Examples </button>
+            <!-- <button  id='action_ad' type="button" class="btn btn-default btn-lg" style="float:right"> -->
+           <!--  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Action
+            </button>  --> 
+            <hr>
+            <div class="action-group">
+            <h4> There are no actions yet</h4>
+            </div>
+			<br><br><br>
+            <textarea form="submitid" style="width:70%" name="feedback" id="feedback" 
+				placeholder="Enter here your feedback about the task, if you have any" autocomplete="off">
+			</textarea>
+          </div>
+        </div>
+		</div>
+    </div>
+	<br><br><br>
+		<footer style="color:lightslategray; font-size: small; padding-left:5%; padding-right:5%" >
+	  This HIT is part of a MIT scientific research project. Your decision to complete this HIT is voluntary. There is no way for us to identify you. The only information we will have, in addition to your responses, is the time at which you completed the survey. The results of the research may be presented at scientific meetings or published in scientific journals. Clicking on the 'SUBMIT' button on the bottom of this page indicates that you are at least 18 years of age and agree to complete this HIT voluntarily. If you have any doubtes or concerns, please contact xpuig@mit.edu
+	  </footer>
+    <xml id="toolbox" style="display: none">
+
+
+    </xml>
+	  <script>w3.includeHTML();</script>
+      <script src="terminals.js"></script>
+      <script src="blocks.js"></script>
+  </body>
+  
+    
+</html>
