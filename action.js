@@ -75,6 +75,7 @@ function Action (id, xml_name, results=false, is_test=false) {
                 colour: '#ccc',
                 snap: true}});
     this.workspace.variablesforObjects = {};
+    this.workspace.object_types = object_types;
     this.workspace.id_action = this.id;
     var onresize = function(e) {
         // Compute the absolute coordinates and dimensions of blocklyArea.
@@ -116,7 +117,7 @@ function Action (id, xml_name, results=false, is_test=false) {
     if (use_new_action_block)
       var xml_text = '<?xml version="1.0"?> \
               <xml xmlns="http://www.w3.org/1999/xhtml"> \
-              <block type="start_block2" movable="false" x="140" y="70" ></block>\
+              <block type="start_block2" movable="false" x="200" y="70" ></block>\
               </xml>';
     else
       var xml_text = '<?xml version="1.0"?> \

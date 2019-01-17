@@ -380,6 +380,10 @@ function addGeneralBlock2(props_available){
   $('#toolbox').empty();
     $('#toolbox').append(
       '<block type="'+name_block+'" disabled="'+val_disabled+'"></block>');
+      $('#toolbox').append('<block type="and_or_block"></block>');
+      $('#toolbox').append('<block type="if_then_block"></block>');
+      $('#toolbox').append('<block type="type_state"></block>');
+      $('#toolbox').append('<block type="type_spatial"></block>');
     //$($('category[name="Action Block Testing"]')[0]).append(
   //    '<block type="'+name_block+'" disabled="'+val_disabled+'"></block>');
 }
