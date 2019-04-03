@@ -27,4 +27,4 @@ unzip bootstrap.zip
 - `action.js`: defines the class `Action`. Each action will contain a program and the block you want to store in it.
 - `blocks.js`: contains the definitions of the blocks. Each block starts with Blockly.Blocks['name_block'] you can create there your own blocks.
 - `terminals.js`: contains functions that fire when you modify the blocks, like setting the arguments etc. It also sets the toolbox to add blocks into the canvas.
-- 
+- `knowledge_base/*`: contains js files with information to help populate the blocks (number of actions, interactions etc). 
