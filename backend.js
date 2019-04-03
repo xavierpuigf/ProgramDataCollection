@@ -1,16 +1,18 @@
-var use_new_action_block = true;
-var num_actions_do = 1;
-var instructions_shown = false;
-var show_description = true;
+/*
+ * CONFIG 
+*/
+var show_instr_at_start = false; // Whether to show instructions at the beginning
+var num_actions_do = 1; // How many actions before you can submit
+var show_description = true; // Whether to show a description for every action
+var editing_name = false; // Whether you can edit the class name
+var use_new_action_block = true; // Set to true for now
 
 var cont = 0
 var action_click = false;
-var loaded = false;
-var editing_name = false;
-var number_actions = 0;
-var actions = [];
-var xml_results = [];
 
+/*
+ * AMT_VARIABLES
+*/
 var workerId;
 var assignmentId;
 var hitId;
@@ -18,12 +20,22 @@ var gameId;
 var expt = gup('expt');
 var turkSubmitTo= gup('turkSubmitTo');
 
-var id_examples = [];
-var time_init;
+
+/*
+ * GLOBAL_VARIABLES
+*/
+var instructions_shown = show_instr_at_start; // Whether the instruction is currently shown
+var id_examples = []; // stores the examples when clicking show/hide examples
+var time_init; // Timing of the actions
+
+var actions = []; // Created actions
+var number_actions = 0; // Current number of actions
+var xml_results = []; // resulting programs
 
 var num_tasks = 1;
 var task_name = 0;
 var unnamed_task = 'Task without name';
+
 
 
 function gup( name )
@@ -36,6 +48,14 @@ function gup( name )
     return 'NO_VAL';
   else
     return results[1];
+}
+
+function setInstruction(){
+  if (!show_description){
+    $('#descriptioninstruction').hide();
+  }
+  $('#instructiondiv').toggle();
+  $('#hide_instructions').html('Hide Instructions');
 }
 function switchInstruction(){
   if (!show_description){
@@ -646,6 +666,9 @@ function retrieveActionsWorker(){
 
 }
 function startup(){
+  if (show_instr_at_start){
+      setInstruction();
+  }
   $("#feedback").val('');
   $('#submitButton').val('Submit ('+num_actions_do+' actions left)');
   $('#submitid').attr('action', decodeURIComponent(turkSubmitTo+'/mturk/externalSubmit'));

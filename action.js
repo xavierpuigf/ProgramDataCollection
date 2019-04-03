@@ -153,7 +153,6 @@ function Action (id, xml_name, results=false, is_test=false) {
         },
         success: function(resultData){
           xml_text = action.processXML(resultData);
-          console.log(xml_text);
           xml_file = Blockly.Xml.textToDom(xml_text);
           ase = xml_file;
           action.xml_program = xml_file.getElementsByTagName('program')[0];

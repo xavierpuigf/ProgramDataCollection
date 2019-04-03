@@ -20,3 +20,11 @@ cd libraries
 wget https://getbootstrap.com/2.3.2/assets/bootstrap.zip
 unzip bootstrap.zip
 ```
+
+
+## Contents
+- `backend.js`: starting point. Contains functions to create new actions, store them and submit tasks to AMT. 
+- `action.js`: defines the class `Action`. Each action will contain a program and the block you want to store in it.
+- `blocks.js`: contains the definitions of the blocks. Each block starts with Blockly.Blocks['name_block'] you can create there your own blocks.
+- `terminals.js`: contains functions that fire when you modify the blocks, like setting the arguments etc. It also sets the toolbox to add blocks into the canvas.
+- 

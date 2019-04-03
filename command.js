@@ -1,4 +1,4 @@
-""" Transform the knowledge base for use in blocks """ 
+// Transform the knowledge base for use in blocks 
 var object_types = [];
 
 for (var key in dictionary_allowances){

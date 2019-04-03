@@ -23,7 +23,6 @@ function getObjects(){
   return results;
 }
 function getObjectsforAction(action_name, arg){
-  console.log(action_name)
   if (!action_name){
       return getObjects();
   }
@@ -126,7 +125,6 @@ Blockly.Blocks['type_object'] = {
           }
         }
         var action_name = block_parent.action_name;
-        console.log(action_name);
         obj_res = getObjectsforAction(action_name, input_num-1);
 
       }
@@ -215,7 +213,6 @@ init: function() {
    mutationToDom: function(){
     var container = document.createElement('mutation');
     container.setAttribute('num_elems', this.inputList.length-1);
-    console.log(container);
     return container;
    },
    domToMutation: function(xmlElement) {
@@ -223,7 +220,6 @@ init: function() {
           if (num_elems == 0){
               num_elems = 1
           }
-          console.log(num_elems);
           for (it = 0; it < num_elems; it++){
             this.appendValueInput("boolean_conds_"+it);
           }
@@ -240,12 +236,10 @@ init: function() {
    },
    onchange: function(event){
        if (event.oldParentId != this.id && event.newParentId == this.id){
-            console.log('Connect')
             var val = this.inputList.length-1;
             this.appendValueInput("boolean_conds_"+val);
        }
        else if (event.oldParentId == this.id && event.newParentId != this.id){
-           console.log(this.inputList)
            var inp_id = parseInt(event.oldInputName.split('_')[2])+1;
            for (it = inp_id+1; it < this.inputList.length-1; it++){
             var nextBlock = this.inputList[it].connection.targetConnection.sourceBlock_;
@@ -319,7 +313,6 @@ Blockly.Blocks['type_state'] = {
           return [['select', 'select']];
         }
         var bi = block.inputList[i].connection.targetConnection.sourceBlock_;
-        console.log(bi);
         var selected_obj = bi.selected_object;
         obj_idx = parseInt(selected_obj.split('_')[1])-1;
         if (selected_obj.startsWith('objid')){
@@ -336,10 +329,8 @@ Blockly.Blocks['type_state'] = {
             else {
               states = states.filter(value => -1 !==curr_states.indexOf(value));
             }
-            console.log(states.length);
           }
         }
-        console.log(objects_selected);
         var final_states = [];
         for (var i = 0; i < states.length; i++){
             final_states.push([states[i], states[i]]);
@@ -353,7 +344,6 @@ Blockly.Blocks['type_state'] = {
     }
 
 	this.connectBlocks = function(){
-      console.log('Try connect')
       if (!this.inputList[0].connection.targetConnection){
         created_block = this.workspace.newBlock('type_object2');
         created_block.initSvg();
@@ -446,7 +436,6 @@ Blockly.Blocks['type_spatial'] = {
     this.setColour(290);
     this.setOutput(true, null);
     this.setHelpUrl('http://www.w3schools.com/jsref/jsref_length_string.asp');
-    console.log('HERE');
     
   },
   onchange: function(event){
