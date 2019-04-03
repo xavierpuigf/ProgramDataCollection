@@ -239,7 +239,6 @@ init: function() {
      this.setOutput(true, null);
    },
    onchange: function(event){
-       console.log(this.inputList);
        if (event.oldParentId != this.id && event.newParentId == this.id){
             console.log('Connect')
             var val = this.inputList.length-1;
@@ -301,13 +300,6 @@ Blockly.Blocks['type_state'] = {
     
     this.obtainworkspaceVariables = function(aux){
       return this.workspace.variablesforObjects;
-      // var thisworkspaceVariables = {};
-      // for (var action_elem = 0; action_elem < actions.length; action_elem++){
-      //   if (actions[action_elem].id == actionId){
-      //     thisworkspaceVariables = actions[action_elem].workspace.variablesforObjects;
-      //   }
-      // }
-      // return thisworkspaceVariables;
     }
     this.changeState = function(newOp){
       // var inputExists = blockInt.getInput('ITEMINP');

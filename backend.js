@@ -22,8 +22,10 @@ var id_examples = [];
 var time_init;
 
 var num_tasks = 1;
-
 var task_name = 0;
+var unnamed_task = 'Task without name';
+
+
 function gup( name )
 {
   name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
@@ -31,7 +33,7 @@ function gup( name )
   var regex = new RegExp( regexS );
   var results = regex.exec( window.location.href );
   if( results == null )
-    return "NO_VAL";
+    return 'NO_VAL';
   else
     return results[1];
 }
@@ -91,7 +93,6 @@ function addAutoComplete(name_button, name_objects, parent_element, doneFunction
   //str = '<div class=input-group"><input type="text" style="display: inline-block; padding-left: 1%; padding-right: 4%; margin-top:3%; width: 50%; font-size: 11px;" placeholder="'+name_button+'"  </input><span class="input-group-btn"><button class="btn btn-default" type="button"><span class="caret"></span></button></span></div>';
   var str = '<input type="text" style="display: inline-block; padding-left: 1%; padding-right: 4%; margin-top:3%; width: 50%; font-size: 11px;" placeholder="'+name_button+'"  </input>';
   
-  console.log('HERE');
   $(parent_element).append(str);
   var aux = $(parent_element).children().last();
   $(aux).keypress(
@@ -683,7 +684,7 @@ function startup(){
       }
     }
     var mode = gup('mode');
-    if (mode != "NO_VAL"){
+    if (mode != 'NO_VAL'){
       $.ajax({
         type: "POST",
         url: "file_manager.php",
