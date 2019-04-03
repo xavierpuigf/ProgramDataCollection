@@ -1,5 +1,6 @@
 # ProgramDataCollection
-![](assets/media1.gif)
+<img src="assets/media1.gif" width="500"/>
+
 This repository contains code to create programs based on [blockly](https://developers.google.com/blockly/) library
 ## Setup
 Make sure you get the blockly submodule, modified to work with these programs. You can get it by cloning the repo recrusively.
