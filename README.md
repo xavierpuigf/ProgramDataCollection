@@ -37,7 +37,7 @@ Open `interface.html` in a browser as:
 ```
 interface.html?filetasks={CONTENT}&mode={MODE}
 ```
-Where `{MODE}` is the mode of annotation:
+Where `{MODE}` is a string containing the mode of annotation. It can be one of the following:
 - `TASK_NAME`: Creates a single task with name `{CONTENT}`.
 - `TASK_FILE_NAME`: Creates a task based on the contents of the file `example_tasks/{CONTENT}`
 - `DATABASE`: to debug. Checks from a database, based on which workers did what.
